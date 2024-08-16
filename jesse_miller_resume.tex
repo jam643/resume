@@ -1,0 +1,410 @@
+%-------------------------
+% Resume in Latex
+% Author : Jesse Miller
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+\usepackage[
+    left=0.5in,
+    right=0.5in,
+    top=0.5in,
+    bottom=0.5in,
+    % headheight=15pt,
+    % footskip=20pt
+]{geometry}
+
+\usepackage{latexsym}
+% \usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{hyphenat}
+\usepackage{fontawesome}
+\usepackage{enumitem}
+\input{glyphtounicode}
+
+
+%---------- FONT OPTIONS ----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+% Set the footskip to a reasonable value
+\setlength{\footskip}{25pt}
+
+% Adjust margins
+% \addtolength{\oddsidemargin}{-0.5in}
+% \addtolength{\evensidemargin}{-0.5in}
+% \addtolength{\textwidth}{1in}
+% \addtolength{\topmargin}{-.5in}
+% \addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% \linespread{1.0}
+
+%-------------------------
+% Custom commands
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1}\vspace{-2pt}
+  }
+}
+
+% company name -- location
+% job title -- date
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\textbf{\small#3}} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+% job title -- date
+\newcommand{\resumeSubSubheading}[2]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\textbf{\small#1}} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeEducationHeading}[6]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+      \textit{\small#5} & \textit{\small #6} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeOrganizationHeading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+      \textit{\small#3}
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=15pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%---------- HEADING ----------
+\def\spaceAfterLogo{0.5pt}
+\begin{center}
+  \textbf{\Huge Jesse Miller} \\ \vspace{3pt}
+  \small
+  \faMobile \hspace{\spaceAfterLogo} \href{tel:8454281532}{(845) 428-1532}
+  $|$
+  \faEnvelope \hspace{\spaceAfterLogo} \href{mailto:jam643@cornell.edu}{jam643@cornell.edu}
+  $|$
+  \faLinkedinSquare \hspace{\spaceAfterLogo} \href{https://www.linkedin.com/in/jam643}{linkedin.com/in/jam643}
+  $|$
+  \faGithub \hspace{\spaceAfterLogo} \href{https://github.com/jam643}{github.com/jam643}
+  % $|$
+  % \faGlobe \hspace{\spaceAfterLogo} \href{https://jam643.github.io}{Portfolio}
+  $|$
+  \faMapMarker \hspace{\spaceAfterLogo} \href{https://maps.app.goo.gl/hpB8QGkNWpEHrJGD9}{Cambdrige, MA}
+\end{center}
+
+
+%----------- EXPERIENCE -----------
+
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Motional}{Boston, MA}
+{Principal Robotics Control Engineer}{May 2024 \textbf{--} Present}
+\resumeItemListStart
+\resumeItem{Designed, trained, and deployed a \textbf{PPO-based RL Planner} using PyTorch which outperformed the company’s imitation learning based ML planner in comfort and safety in most scenarios in sim and on-vehicle.}
+\resumeItem{\textbf{Led a cross-org Reflexive Planner project}, a low latency task for collision prevention critical to achieving the Driverless milestone. Coded features that \textbf{reduced false-positive rate by 400\%} and designed regression tests and metrics for performance monitoring.}
+\resumeItem{Awarded Motional's monthly \textbf{"Mobilizer Award"} and consistently recieved "exceeds expectation" for every performance review.}
+\resumeItemListEnd
+
+\resumeSubSubheading
+{Senior Robotics Control Engineer and Team Lead}{August 2020 \textbf{--} May 2024}
+\resumeItemListStart
+\resumeItem{Code-owner and developer for a \textbf{nonlinear trajectory optimizer} formulated with FORCESPRO in Python and deployed in C++.}
+\resumeItemListStart
+\resumeItem{Collaborated to implement and \textbf{patent a novel Contingency MPC} approach for handling multimodal prediction in trajectory optimizer.}
+\resumeItemListEnd
+\resumeItem{Led Path Tracker Perfomance team (6 engineers) creating Python and SQL metric frameworks, automating release tests, and improving LQR tracking performance. Reducing rate of high cross-track error from 25 to 1 violation per 1K miles.}
+\resumeItem{Invented a novel algorithm for generating assertive lane change trajectories across planning control stack; deployed on AV.}
+\resumeItem{Collaborated with team to formulate and implement a \textbf{convex trajectory optimizer} using OSQP, reducing latency by 50\%.}
+\resumeItem{Developed MySQL metric dashboards for visualization, triage, and drilldown of controls related errors; monitored weekly.}
+\resumeItem{\textbf{Led Trajectory Formulation Team} for a quarter; defined team’s north star strategy, conducted one-on-ones, and oversaw successful demo deployment.}
+\resumeItem{Developed and patented an \textbf{ML based vehicle dynamics model} for simulation (LSTM in PyTorch) and deployed it in C++.}
+\resumeItem{Primary code owner and developer for repo containing Python analysis scripts used for AV log visualization and debug, regularly used by 30+ people.}
+\resumeItem{Tuned controller performance on-vehicle, contributing to Aptiv analysts’ feedback that ride was \textbf{“smoother than Waymo’s”}.}
+\resumeItemListEnd
+
+\resumeSubSubheading
+{Robotics Control Engineer III}{October 2018 \textbf{--} August 2020}
+\resumeItemListStart
+\resumeItem{Owner of a dynamic bicycle model based \textbf{path tracker module}, refactoring and integrating code during company merger.}
+\resumeItem{Designed and coded ‘Mock Planner’ \& ‘Fault Injection’ tools used to stress test controller \& for vehicle operator training.}
+\resumeItem{Curated a set of ride comfort metrics (e.g. motion sickness likelihood), implementing extractors to monitor comfort trends.}
+\resumeItem{Mentored intern who explored trajectory optimizer solver modifications for improved latency and performance.}
+\resumeItemListEnd
+
+\resumeSubSubheading
+{Autonomous Vehicle Engineer}{August 2017 \textbf{--} October 2018}
+\resumeItemListStart
+\resumeItem{Worked on vehicle integration and sensor calibration, outfitting the Renault Zoe EVs with nuTonomy’s AV compute stack.}
+\resumeItem{Streamlined AV closed course testing, curating a weekly KPI report on AV performance shared with C-Suite.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Sandia National Labs}{Albuquerque, NM}
+{R\&D Electromechanical Engineer and Technical Lead}{August 2016 \textbf{--} August 2017}
+\resumeItemListStart
+\resumeItem{Tuned a PID controller for a DC motor system using system identification and control design methods in MATLAB/Simulink.}
+\resumeItem{Developed a tester using fiber optics, PXI, LabView, 3D printing, and control design to quantify a mechanism’s performance.}
+\resumeItem{Designed tests and analyzed results to characterize the performance of various mechanisms relating to nuclear weapon safety.}
+\resumeItem{Modeled 3D multibody rigid body dynamic mechanism using Siemens LMS software and performed tests to verify the model.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Autonomous Sailboat Project}{Ithaca, NY}
+{Master’s Thesis, Dynamics Subteam Lead}{January 2015 \textbf{--} May 2016}
+\resumeItemListStart
+\resumeItem{Created \href{https://github.com/jam643/SailboatSim3D/tree/master}{\color{blue}a simulation framework} to model the 3D dynamics of a sailboat in MATLAB to determine the feasibility of autonomously sailing around the world.}
+\resumeItem{Wrote \href{https://bpb-us-w2.wpmucdn.com/sites.coecis.cornell.edu/dist/5/91/files/2017/06/Semester-Report-Spring-2016-Jesse-Miller-1e485cb.pdf}{\color{blue}a thesis paper} describing a novel ‘rudder connected to sail’ design to improve the directional stability of a robotic sailboat.}
+\resumeItem{Presented findings at \href{https://robotics.cornell.edu/2019/08/14/a-directionally-self-stable-robotic-sail-boat-concept-and-simulations/}{\color{blue}a robotics seminar} with advisor \href{http://ruina.tam.cornell.edu/}{\color{blue}Andy Ruina} at Cornell University and received \href{https://www.mae.cornell.edu/news/sibley-school-mechanical-aerospace-engineering-student-awards-0}{\color{blue}the Kelly Prize} for aerospace related research.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Engineering Dynamics Class (MAE 2030)}{Ithaca, NY}
+{Graduate Teaching Specialist}{January 2016 \textbf{--} May 2016}
+\resumeItemListStart
+\resumeItem{Taught two recitation sections with about 15 students in each, held regular office hours, and graded exams.}
+\resumeItem{Volunteered to fill in for the Professor, teaching a one-and-a-half-hour lecture to about 150 students.}
+\resumeItem{Received \textbf{4.88/5 overall rating} on my TA evaluation based on 16 student responses and was nominated to be a TA trainer.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Amazon Robotics}{North Reading, MA}
+{Data Analyst and Performance Intern}{May 2015 \textbf{--} August 2015}
+\resumeItemListStart
+\resumeItem{Created a random forest machine learning predictor using Python and MySQL to predict the time it takes to pick an item off a shelf.}
+\resumeItem{Designed a Linux service using Java and XML, allowing the predictor to be easily used.}
+\resumeItem{Implemented the predictor service with a performance website, improving metrics used to assess employee performance.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Innovative Scientific Solutions Inc.}{Dayton, OH}
+{Engineering Co-op Student}{January 2014 \textbf{--} August 2014}
+\resumeItemListStart
+\resumeItem{\textbf{Invented} a unique idea to listen to the sounds produced by handwriting and understand what was written.}
+\resumeItem{Developed and coded a MATLAB program to transcribe handwriting by only using a microphone.}
+\resumeItem{Presented my invention in a \textbf{U.S. Air Force wide competition} against 37 other inventions.}
+\resumeItem{\textbf{Won} the competition and received \$15,000 in research funding and a patent for the invention.}
+\resumeItem{Designed in NX Unigraphics and performed an experiment to test the effects of unsteady flow through an intercooler.}
+\resumeItem{Published and presented \href{https://www.researchgate.net/publication/290192705_Effect_of_Unsteady_Flow_on_Intercooler_Performance}{\color{blue}a conference paper} based on these findings in the SAE 2014 Aerospace Conference.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Autonomous Systems Laboratory}{Ithaca, NY}
+{Mechanical Engineering Researcher}{August 2014 \textbf{--} December 2014}
+\resumeItemListStart
+\resumeItem{Developed and wrote Python handlers to control a robotic ball, Sphero, with a path planning program, LTLMoP.}
+\resumeItem{Successfully demoed the code, having Sphero autonomously traverse a map and react to its environment.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+%----------- EDUCATION -----------
+\section{Education}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Cornell University, College of Engineering $|$ \small{Ithaca, NY}}{\textit{August 2015 \textbf{--} May 2016}}
+{Master of Engineering Robotics, Controls, and Dynamics}{\textbf{GPA: 4.17/4.0}}
+\resumeItemListStart
+\resumeItem{\href{https://www.mae.cornell.edu/news/sibley-school-mechanical-aerospace-engineering-student-awards-0}{\color{blue}Outstanding Achievement Award}: Given to top two MechE Masters students with the \textbf{highest academic standing}.}
+\resumeItem{\href{https://www.mae.cornell.edu/news/sibley-school-mechanical-aerospace-engineering-student-awards-0}{\color{blue}Kelly Prize}: Excellence in aerospace engineering, recieved for research on a novel robotic sailboat design.}
+\resumeItem{\textbf{Relevant Courses:} Autonomous Mobile Robots, Robot Motion, Feedback Control, Multivar Control Theory, Advanced Dynamics.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Cornell University, College of Engineering $|$ \small{Ithaca, NY}}{\textit{August 2011 \textbf{--} May 2015}}
+{Bachelor of Science in Mechanical Engineering}{\textbf{Major GPA 4.24/4.0 $|$ Cumulative GPA: 4.15/4.0}}
+\resumeItemListStart
+\resumeItem{Sibley Prize: Awarded to the two mechanical engineering graduating seniors with the highest overall GPA.}
+\resumeItemListEnd
+
+% \resumeSubheading
+% {Tri-Valley High School $|$ \small{Grahamsville, NY}}{\textit{September 2007 \textbf{--} May 2011}}
+% {Valedictorian}{}
+
+\resumeSubHeadingListEnd
+
+
+%----------- SKILLS -----------
+
+\section{Skills}
+\resumeSubHeadingListStart
+\small{\item{
+
+              \textbf{Languages:}{ C/C++, C\#, Java, Python, Go, JavaScript, TypeScript, SQL, Swift, Scala, MATLAB, R} \\ \vspace{3pt}
+
+              \textbf{Technologies:}{ Qt, Flask, Django, Node.js, React.js, MySQL, MongoDB, Git, SVN, Docker, AWS, Kubernetes, GCP, Kafka, RabbitMQ, OpenCV, PyTorch, TensorFlow} \\ \vspace{3pt}
+
+              \textbf{Methodologies:}{ Agile, Scrum, OOP, Functional Programming, DevOps, CI/CD, TDD} \\ \vspace{3pt}
+
+        }}
+\resumeSubHeadingListEnd
+
+%----------- SELECT PATENTS -----------
+
+\section{Select Patents}
+\begin{itemize}[leftmargin=15pt]
+  \tiny\resumeItem{\textbf{Autonomous Driving Mode Engagement}, US patent US20230159063A1, March 25, 2023. I developed a method for comfortable and safe transition from manual to autonomous vehicle control.}
+  \tiny\resumeItem{\textbf{Control Architectures for Autonomous Vehicles}, US patent US11794775B2, October 24, 2023. I collaborated to develop and implement novel trajectory optimization based control methods.}
+  \tiny\resumeItem{\textbf{ML Based Vehicle Dynamic Simulator Model} (patent pending), Docket No. I2023099, May 24, 2023. I helped design and deploy an LSTM model trained on vehicle dynamics.}
+  \tiny\resumeItem{\textbf{Shortened Contingency Horizon MPC With a Terminal Car-Follow Constraint} (patent pending), Docket No. I2023017, January 27, 2023. I designed and implemented a sparse contingency trajectory optimization formulation that improved solve-time while maintaining recursive safety guarantees.}
+  \tiny\resumeItem{\textbf{Autonomous Vehicle with Contingency Consideration in Trajectory Realization} (patent pending), Application No US18164652, February 6, 2023. I co-designed and implemented a joint trajectory optimization formulation for safely and comfortably handling multimodal predictions.}
+\end{itemize}\vspace{-5pt}
+
+
+%----------- PROJECTS -----------
+
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\textbf{Filters and Fractals} $|$ \emph{\href{https://github.com/arasgungore/filters-and-fractals}{\color{blue}GitHub}}}{}
+\resumeItemListStart
+\resumeItem{A C project which implements a variety of image processing operations that manipulate the size, filter, brightness, contrast, saturation, and other properties of PPM images from scratch and recursive fractal generation functions to model popular fractals including Mandelbrot set, Julia set, Koch curve, Barnsley fern, and Sierpinski triangle.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Chess Bot} $|$ \emph{\href{https://github.com/arasgungore/chess-bot}{\color{blue}GitHub}}}{}
+\resumeItemListStart
+\resumeItem{A C++ project in which you can play chess against an AI with a specified decision tree depth that uses alpha-beta pruning algorithm to predict the optimal move. Aside from basic moves, this mini chess engine also implements chess rules such as castling, en passant, fifty-move rule, threefold repetition, and pawn promotion.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{DS\&A Projects} $|$ \emph{\href{https://github.com/arasgungore/CMPE250-projects}{\color{blue}GitHub}}}{}
+\resumeItemListStart
+\resumeItem{Five Java projects that apply DS\&A concepts such as discrete-event simulation using priority queues, Dijkstra's shortest path algorithm, Prim's algorithm to find the minimum spanning tree, Dinic's algorithm for maximum flow problems, and weighted job scheduling with dynamic programming to real-world problems.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+
+%----------- RELEVANT COURSEWORK -----------
+
+\section{Relevant Coursework}
+\vspace{2pt}
+\resumeSubHeadingListStart
+\small{\item{
+              \textbf{Major coursework:}{ Materials Science, Electrical Circuits I-II, Digital System Design, Numerical Methods, Probability Theory, Electronics I-II, Signals and Systems, Electromagnetic Field Theory, Energy Conversion, System Dynamics and Control, Communication Engineering, Pattern Recognition, Introduction to Digital Signal Processing, Introduction to Digital Communications, Introduction to Database Systems, Introduction to Image Processing, Machine Vision} \\ \vspace{3pt}
+
+              \textbf{Minor coursework:}{ Discrete Computational Structures, Introduction to Object-Oriented Programming, Data Structures and Algorithms, Computer Organization, Fundamentals of Software Engineering}
+        }}
+\resumeSubHeadingListEnd
+
+
+
+%----------- CERTIFICATES -----------
+
+\section{Certificates}
+\resumeSubHeadingListStart
+
+\resumeOrganizationHeading
+{Procter \& Gamble VIA Certificate Program}{Feb 2022}{Project Management and Personal Productivity}
+
+\resumeSubHeadingListEnd
+
+
+
+%----------- ORGANIZATIONS -----------
+
+\section{Organizations}
+\resumeSubHeadingListStart
+
+\resumeOrganizationHeading
+{Institute of Electrical and Electronics Engineers (IEEE)}{Feb 2022 -- Present}{Student Member}
+
+\resumeSubHeadingListEnd
+
+
+
+%----------- HOBBIES -----------
+
+\section{Hobbies}
+\resumeSubHeadingListStart
+\small{\item{Basketball, Swimming, Fitness, Eight-ball, Horology}}
+\resumeSubHeadingListEnd
+
+
+
+%----------- REFERENCES -----------
+
+\section{References}
+\vspace{2pt}
+\resumeSubHeadingListStart
+\item{References available upon request.}
+\resumeSubHeadingListEnd
+
+
+
+%-------------------------------------------
+\end{document}
