@@ -22,7 +22,7 @@ Note that the hyperlinks won't work viewing as screenshots
 
 ### In Cloud
 
-Copy .tex file to [Overleaf](overleaf.com) and save as pdf.
+Copy .tex file to [Overleaf](https://www.overleaf.com/) and save as pdf.
 
 ### Locally on Mac
 
