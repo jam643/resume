@@ -33,7 +33,7 @@ Copy .tex file to [Overleaf](https://www.overleaf.com/) and save as pdf.
 ```bash
 pdflatex jesse_miller_resume.tex
 ```
-* Run the following in a terminal to generate png screenshots from the pdf:
+* Run the following in a terminal to generate png screenshots from the pdf. Or can optionally add this to `.git/hooks/pre-commit` to auto-generate when committing:
 ```bash
 magick -density 300 jesse_miller_resume.pdf -background white -alpha remove -quality 90 images/jesse_miller_resume.png
 ```
