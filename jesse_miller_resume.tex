@@ -66,7 +66,7 @@
 % Set spacing
 \linespread{1.0}  % single line spacing
 \setlength{\parskip}{0pt} % paragraph spacing
-\setlist[itemize]{itemsep=1pt} % vertical spacing between bullets
+\setlist[itemize]{itemsep=0pt} % vertical spacing between bullets
 
 % set bullet itemization formatting
 \setlist[itemize,1]{label=$\vcenter{\hbox{\tiny$\bullet$}}$} 
@@ -83,20 +83,18 @@
 }
 
 % company name -- location
-% job title -- date
-\newcommand{\resumeSubheading}[4]{
-  \item
-    \begin{tabular*}{1\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\textbf{\small#3}} & \textit{\small #4} \\
+\newcommand{\resumeSubheading}[2]{
+  \item 
+    \begin{tabular*}{1\textwidth}[b]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2
     \end{tabular*}
 }
 
 % job title -- date
 \newcommand{\resumeSubSubheading}[2]{
     \item
-    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\textbf{\small#1}} & \textit{\small #2} \\
+    \begin{tabular*}{1.0\textwidth}[b]{l@{\extracolsep{\fill}}r}
+      \textit{\textbf{\small#1}} & \textit{\small #2}
     \end{tabular*}
 }
 
@@ -104,11 +102,11 @@
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
+      \small#1 & #2
     \end{tabular*}
 }
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0pt, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=15pt]}
 \newcommand{\resumeItemListEnd}{\end{itemize}}
@@ -147,6 +145,7 @@
 
 \resumeSubheading
 {Motional}{Boston, MA}
+\resumeSubSubheading
 {Principal Robotics Control Engineer}{May 2024 \textbf{--} Present}
 \resumeItemListStart
 \resumeItem{Designed, trained, and deployed a \textbf{PPO-based RL Planner} using PyTorch which outperformed the company’s imitation learning based ML planner in comfort and safety in most scenarios in sim and on-vehicle.}
@@ -189,6 +188,7 @@
 
 \resumeSubheading
 {Sandia National Labs}{Albuquerque, NM}
+\resumeSubSubheading
 {R\&D Electromechanical Engineer and Technical Lead}{August 2016 \textbf{--} August 2017}
 \resumeItemListStart
 \resumeItem{Tuned a PID controller for a DC motor system using system identification and control design methods in MATLAB/Simulink.}
@@ -199,6 +199,7 @@
 
 \resumeSubheading
 {Autonomous Sailboat Project}{Ithaca, NY}
+\resumeSubSubheading
 {Master’s Thesis, Dynamics Subteam Lead}{January 2015 \textbf{--} May 2016}
 \resumeItemListStart
 \resumeItem{Created \bref{https://github.com/jam643/SailboatSim3D/tree/master}{a simulation framework} to model the 3D dynamics of a sailboat in MATLAB to determine the feasibility of autonomously sailing around the world.}
@@ -209,6 +210,7 @@
 
 \resumeSubheading
 {Engineering Dynamics Class (MAE 2030)}{Ithaca, NY}
+\resumeSubSubheading
 {Graduate Teaching Specialist}{January 2016 \textbf{--} May 2016}
 \resumeItemListStart
 \resumeItem{Taught two recitation sections with about 15 students in each, held regular office hours, and graded exams.}
@@ -218,6 +220,7 @@
 
 \resumeSubheading
 {Amazon Robotics}{North Reading, MA}
+\resumeSubSubheading
 {Data Analyst and Performance Intern}{May 2015 \textbf{--} August 2015}
 \resumeItemListStart
 \resumeItem{Created a random forest machine learning predictor using Python and MySQL to predict the time it takes to pick an item off a shelf.}
@@ -227,6 +230,7 @@
 
 \resumeSubheading
 {Innovative Scientific Solutions Inc.}{Dayton, OH}
+\resumeSubSubheading
 {Engineering Co-op Student}{January 2014 \textbf{--} August 2014}
 \resumeItemListStart
 \resumeItem{\textbf{Invented} a unique idea to listen to the sounds produced by handwriting and understand what was written.}
@@ -239,6 +243,7 @@
 
 \resumeSubheading
 {Autonomous Systems Laboratory}{Ithaca, NY}
+\resumeSubSubheading
 {Mechanical Engineering Researcher}{August 2014 \textbf{--} December 2014}
 \resumeItemListStart
 \resumeItem{Developed and wrote Python handlers to control a robotic ball, Sphero, with a path planning program, LTLMoP.}
@@ -254,6 +259,7 @@
 
 \resumeSubheading
 {Cornell University, College of Engineering $|$ \small{Ithaca, NY}}{\textit{August 2015 \textbf{--} May 2016}}
+\resumeSubSubheading
 {Master of Engineering Robotics, Controls, and Dynamics}{\textbf{GPA: 4.17/4.0}}
 \resumeItemListStart
 \resumeItem{\bref{https://www.mae.cornell.edu/news/sibley-school-mechanical-aerospace-engineering-student-awards-0}{Outstanding Achievement Award}: Given to top two MechE Masters students with the \textbf{highest academic standing}.}
@@ -263,6 +269,7 @@
 
 \resumeSubheading
 {Cornell University, College of Engineering $|$ \small{Ithaca, NY}}{\textit{August 2011 \textbf{--} May 2015}}
+\resumeSubSubheading
 {Bachelor of Science in Mechanical Engineering}{\textbf{Major GPA 4.24/4.0 $|$ Cumulative GPA: 4.15/4.0}}
 \resumeItemListStart
 \resumeItem{\bref{https://www.mae.cornell.edu/news/sibley-school-mechanical-aerospace-engineering-student-awards-1}{Sibley Prize}: Awarded to the two mechanical engineering graduating seniors with the \textbf{highest overall GPA}.}
