@@ -1,6 +1,7 @@
 # Jesse Miller Resume
 
-My resume written in LaTeX. Note that different variations of the resume may be maintained on separate branches.
+My resume written in LaTeX. Note that different variations of the resume may be maintained on separate git branches. 
+To trim my resume's length I may comment out certain sections so that they are not rendered but the information remains within the .tex file. 
 
 ## View PDF
 
