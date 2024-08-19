@@ -3,14 +3,16 @@
 % Author : Jesse Miller
 %------------------------
 
+% supports 10, 11, 12pt font sizes
+% letterpaper = 8.5in x 11in
 \documentclass[letterpaper,11pt]{article}
+
+% set margins
 \usepackage[
     left=0.5in,
     right=0.5in,
-    top=0.5in,
-    bottom=0.5in,
-    % headheight=15pt,
-    % footskip=20pt
+    top=0.4in,
+    bottom=0.4in,
 ]{geometry}
 
 \usepackage{latexsym}
@@ -28,51 +30,45 @@
 \usepackage{fontawesome}
 \usepackage{enumitem}
 \input{glyphtounicode}
-
-
-%---------- FONT OPTIONS ----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
+\usepackage{parskip}
 
 
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+
+% clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
+% remove lines between header/footer
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-% Set the footskip to a reasonable value
-\setlength{\footskip}{25pt}
-
-% Adjust margins
-% \addtolength{\oddsidemargin}{-0.5in}
-% \addtolength{\evensidemargin}{-0.5in}
-% \addtolength{\textwidth}{1in}
-% \addtolength{\topmargin}{-.5in}
-% \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
 
+% don't stretch text to fill the entire line
 \raggedbottom
 \raggedright
+% remove horizonal padding from table cells
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
+% Section heading formatting
 \titleformat{\section}{
-  \vspace{-10pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule]
+
+\titlespacing*{\section}
+{0pt} % left indent
+{3pt} % spacing above
+{3pt} % spacing below
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
-% \linespread{1.0}
+% Set spacing
+\linespread{1.0}  % single line spacing
+\setlength{\parskip}{0pt} % paragraph spacing
+\setlist[itemize]{itemsep=1pt} % vertical spacing between bullets
 
+% set bullet itemization formatting
 \setlist[itemize,1]{label=$\vcenter{\hbox{\tiny$\bullet$}}$} 
 \setlist[itemize,2]{label=$\vcenter{\hbox{\tiny$\bullet$}}$}
 \setlist[itemize,3]{label=$\vcenter{\hbox{\tiny$\circ$}}$}
@@ -82,67 +78,46 @@
 
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1}\vspace{-4pt}
+    {#1}
   }
 }
 
 % company name -- location
 % job title -- date
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
+  \item
     \begin{tabular*}{1\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\textbf{\small#3}} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}
 }
 
 % job title -- date
 \newcommand{\resumeSubSubheading}[2]{
-    \vspace{-2pt}\item
+    \item
     \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
       \textit{\textbf{\small#1}} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-
-\newcommand{\resumeEducationHeading}[6]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-      \textit{\small#5} & \textit{\small #6} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}
 }
 
 
 \newcommand{\resumeProjectHeading}[2]{
-    \vspace{-2pt}\item
+    \item
     \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}
 }
-
-
-\newcommand{\resumeOrganizationHeading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textit{\small #2} \\
-      \textit{\small#3}
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=15pt]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
 
 \newcommand{\bref}[2]{\href{#1}{\color{blue}{#2}}}
 
+
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 \begin{document}
 
@@ -305,12 +280,12 @@
 
 \section{Select Patents}
 \begin{itemize}[leftmargin=15pt]
-  \tiny\resumeItem{\textbf{Autonomous Driving Mode Engagement}, US patent US20230159063A1, March 25, 2023. I developed a method for comfortable and safe transition from manual to autonomous vehicle control.}
-  \tiny\resumeItem{\textbf{Control Architectures for Autonomous Vehicles}, US patent US11794775B2, October 24, 2023. I collaborated to develop and implement novel trajectory optimization based control methods.}
-  \tiny\resumeItem{\textbf{ML Based Vehicle Dynamic Simulator Model} (patent pending), Docket No. I2023099, May 24, 2023. I helped design and deploy an LSTM model trained on vehicle dynamics.}
-  \tiny\resumeItem{\textbf{Shortened Contingency Horizon MPC With a Terminal Car-Follow Constraint} (patent pending), Docket No. I2023017, January 27, 2023. I designed and implemented a sparse contingency trajectory optimization formulation that improved solve-time while maintaining recursive safety guarantees.}
-  \tiny\resumeItem{\textbf{Autonomous Vehicle with Contingency Consideration in Trajectory Realization} (patent pending), Application No US18164652, February 6, 2023. I co-designed and implemented a joint trajectory optimization formulation for safely and comfortably handling multimodal predictions.}
-\end{itemize}\vspace{-5pt}
+  \resumeItem{\textbf{Autonomous Driving Mode Engagement}, US patent US20230159063A1, March 25, 2023. I developed a method for comfortable and safe transition from manual to autonomous vehicle control.}
+  \resumeItem{\textbf{Control Architectures for Autonomous Vehicles}, US patent US11794775B2, October 24, 2023. I collaborated to develop and implement novel trajectory optimization based control methods.}
+  \resumeItem{\textbf{ML Based Vehicle Dynamic Simulator Model} (patent pending), Docket No. I2023099, May 24, 2023. I helped design and deploy an LSTM model trained on vehicle dynamics.}
+  \resumeItem{\textbf{Shortened Contingency Horizon MPC With a Terminal Car-Follow Constraint} (patent pending), Docket No. I2023017, January 27, 2023. I designed and implemented a sparse contingency trajectory optimization formulation that improved solve-time while maintaining recursive safety guarantees.}
+  \resumeItem{\textbf{Autonomous Vehicle with Contingency Consideration in Trajectory Realization} (patent pending), Application No US18164652, February 6, 2023. I co-designed and implemented a joint trajectory optimization formulation for safely and comfortably handling multimodal predictions.}
+\end{itemize}
 
 %----------- SKILLS -----------
 
