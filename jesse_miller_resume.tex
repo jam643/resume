@@ -146,6 +146,8 @@
   \faMapMarker \hspace{\spaceAfterLogo} \href{https://maps.app.goo.gl/hpB8QGkNWpEHrJGD9}{Cambdrige, MA}
 \end{center}
 
+\section{Personal Statement}
+\small Seasoned Robotics Control Engineer specializing in autonomous vehicles. Expert in control theory, trajectory optimization, and reinforcement learning. Passionate about continuous learning, working on numerous side projects and taking online courses.
 
 %----------- EXPERIENCE -----------
 
@@ -158,7 +160,7 @@
 {Principal Robotics Control Engineer}{May 2024 \textbf{--} Present}
 \outerBulletListStart
 \bulletItem{Designed, trained, and deployed a \textbf{PPO-based RL Planner} using PyTorch which outperformed the company’s imitation learning based ML planner in comfort and safety in most scenarios in sim and on-vehicle.}
-\bulletItem{\textbf{Led a cross-org Reflexive Planner project}, a low latency task for collision prevention critical to achieving the Driverless milestone. Coded features that \textbf{reduced false-positive rate by 400\%} and designed regression tests and metrics for performance monitoring. Presented results directly to \textbf{Motional's CTO}.}
+\bulletItem{\textbf{Led a cross-org Reflexive Planner project}, a low latency task for collision prevention critical to achieving the Driverless milestone. Coded features that \textbf{reduced the false-positive rate by 400\%} and designed regression tests and metrics for performance monitoring. Presented results directly to \textbf{Motional's CTO}.}
 \bulletItem{Awarded Motional's monthly \textbf{"Mobilizer Award"} and consistently received "exceeds expectation" for every performance review.}
 \outerBulletListEnd
 
@@ -169,20 +171,20 @@
 \innerBulletListStart
 \bulletItem{Collaborated to implement and \textbf{patent a novel Contingency MPC} approach for handling multi-modal predictions in trajectory optimizer.}
 \bulletItem{Invented a novel algorithm for generating assertive lane change trajectories across planning control stack; deployed on AV.}
-\bulletItem{Tuned controller performance on-vehicle, contributing to investor analysts’ feedback that ride was \textbf{“smoother than Waymo’s”}.}
+\bulletItem{Tuned controller performance on-vehicle, contributing to investor analysts’ feedback that the ride was \textbf{“smoother than Waymo’s”}.}
 \innerBulletListEnd
 \bulletItem{Led Path Tracker Perfomance team (6 ppl) creating Python and SQL metric frameworks, automating release tests, and improving LQR tracking performance. Reduced rate of high cross-track error from \textbf{25 to 1 violation per 1K miles}.}
 \bulletItem{Collaborated with team to formulate and implement a \textbf{convex trajectory optimizer} using OSQP, reducing latency by 50\%.}
 \bulletItem{Developed MySQL metric dashboards for visualization, triage, and drilldown of controls related errors; monitored weekly.}
-\bulletItem{\textbf{Led Trajectory Formulation Team} for a quarter; defined team’s north star strategy, conducted one-on-ones, and oversaw successful demo deployment.}
-\bulletItem{Developed and patented an \textbf{ML based vehicle dynamics model} for simulation (LSTM in PyTorch) and deployed it in C++, reducing avg displacement error by 40\% compared to physics based model.}
+\bulletItem{\textbf{Led Trajectory Formulation Team} for a quarter; defined the team’s north star strategy, conducted one-on-ones, and oversaw successful demo deployment.}
+\bulletItem{Developed and patented an \textbf{ML based vehicle dynamics model} for simulation (LSTM in PyTorch) and deployed it in C++, reducing average displacement error by 40\% compared to physics based model.}
 \bulletItem{Primary code owner and developer for repo containing Python analysis scripts used for AV log visualization and debug, regularly used by 30+ people.}
 \outerBulletListEnd
 
 \titleAndDateHeading
 {Robotics Control Engineer III}{October 2018 \textbf{--} August 2020}
 \outerBulletListStart
-\bulletItem{Owner of a dynamic bicycle model based \textbf{path tracker module}, refactoring and integrating code during company merger.}
+\bulletItem{Owner of a dynamic bicycle model based \textbf{path tracker module}, refactoring and integrating code during the company merger.}
 \bulletItem{Designed and coded ‘Mock Planner’ \& ‘Fault Injection’ tools in C++ and Python used to stress test controller \& for vehicle operator training.}
 \bulletItem{Curated a set of ride comfort metrics (e.g. motion sickness likelihood), implementing extractors to monitor comfort trends.}
 \bulletItem{Mentored intern who explored trajectory optimizer solver modifications for improved latency and performance.}
@@ -243,9 +245,11 @@
 {Engineering Co-op Student}{January 2014 \textbf{--} August 2014}
 \outerBulletListStart
 \bulletItem{\textbf{Invented} a unique idea to listen to the sounds produced by handwriting and understand what was written.}
+\innerBulletListStart
 \bulletItem{Developed and \bref{https://github.com/jam643/WriteHear/tree/master}{coded a MATLAB program} to transcribe handwriting by only using a microphone.}
 \bulletItem{\bref{https://github.com/jam643/WriteHear/blob/master/WriteHear.pdf}{Presented my invention} in a \textbf{U.S. Air Force wide competition} against 37 other inventions.}
 \bulletItem{\textbf{Won} the competition and received \$15,000 in research funding and a patent for the invention.}
+\innerBulletListEnd
 \bulletItem{Designed in NX Unigraphics and performed an experiment to test the effects of unsteady flow through an intercooler.}
 \bulletItem{Published and presented \bref{https://www.researchgate.net/publication/290192705_Effect_of_Unsteady_Flow_on_Intercooler_Performance}{a conference paper} based on these findings in the SAE 2014 Aerospace Conference.}
 \outerBulletListEnd
@@ -269,7 +273,7 @@
 \companyNameAndLocationHeading
 {Cornell University, College of Engineering $|$ \small{Ithaca, NY}}{\textit{August 2015 \textbf{--} May 2016}}
 \titleAndDateHeading
-{Master of Engineering Robotics, Controls, and Dynamics}{\textbf{GPA: 4.17/4.0}}
+{Master of Engineering in Robotics, Controls, and Dynamics}{\textbf{GPA: 4.17/4.0}}
 \outerBulletListStart
 \bulletItem{\bref{https://www.mae.cornell.edu/news/sibley-school-mechanical-aerospace-engineering-student-awards-0}{Outstanding Achievement Award}: Given to top two MechE Masters students with the \textbf{highest academic standing}.}
 \bulletItem{\bref{https://www.mae.cornell.edu/news/sibley-school-mechanical-aerospace-engineering-student-awards-0}{Kelly Prize}: Excellence in aerospace engineering, received for research on a novel robotic sailboat design.}
@@ -307,17 +311,25 @@
 
 \section{Skills \& Interests}
 \sectionListStart
-\small{\item{
+\bulletItem{\textbf{Languages:}{ Python, C++, MATLAB, SQL, LabVIEW, C}}
+\vspace{\vspaceAfterBullets}
+\bulletItem{\textbf{Technologies:}{ PyTorch, FORCES Pro, Stable-Baselines3, OSQP, Ubuntu/Linux, Git, CMake, Bazel, \LaTeX, Jupyter notebook, Simulink, OpenCV, Raspberry Pi, Arduino, SolidWorks, Blender}}
+\vspace{\vspaceAfterBullets}
+\bulletItem{\textbf{Continued Education:}{ \bref{https://github.com/jam643/CS285DeepRL/tree/master}{Deep Reinforcement Learning CS285}, \bref{https://github.com/jam643/UnderactuatedRobotics-6p832-JesseM}{Underactuated Robotics MIT 6.832}, Udemy Design Patterns in C++}}
+\vspace{\vspaceAfterBullets}
+\bulletItem{\textbf{Interests:}{ Acoustic guitar, ping pong, badminton, tennis}}
 
-              \textbf{Languages:}{ Python, C++, MATLAB, SQL, LabVIEW, C} \\ \vspace{\vspaceAfterBullets}
+% \small{\item{
 
-              \textbf{Technologies:}{ PyTorch, FORCES Pro, Stable-Baselines3, OSQP, Ubuntu/Linux, Git, CMake, Bazel, \LaTeX, Jupyter notebook, Simulink, OpenCV, Raspberry Pi, Arduino, SolidWorks, Blender} \\ \vspace{\vspaceAfterBullets}
+%               \textbf{Languages:}{ Python, C++, MATLAB, SQL, LabVIEW, C} \\ \vspace{\vspaceAfterBullets}
 
-              \textbf{Continued Education:}{ \bref{https://github.com/jam643/CS285DeepRL/tree/master}{Deep Reinforcement Learning CS285}, \bref{https://github.com/jam643/UnderactuatedRobotics-6p832-JesseM}{Underactuated Robotics MIT 6.832}, Udemy Design Patterns in C++} \\ \vspace{\vspaceAfterBullets}
+%               \textbf{Technologies:}{ PyTorch, FORCES Pro, Stable-Baselines3, OSQP, Ubuntu/Linux, Git, CMake, Bazel, \LaTeX, Jupyter notebook, Simulink, OpenCV, Raspberry Pi, Arduino, SolidWorks, Blender} \\ \vspace{\vspaceAfterBullets}
 
-              \textbf{Interests:}{ Acoustic guitar, ping pong, badminton, tennis} \\ \vspace{\vspaceAfterBullets}
+%               \textbf{Continued Education:}{ \bref{https://github.com/jam643/CS285DeepRL/tree/master}{Deep Reinforcement Learning CS285}, \bref{https://github.com/jam643/UnderactuatedRobotics-6p832-JesseM}{Underactuated Robotics MIT 6.832}, Udemy Design Patterns in C++} \\ \vspace{\vspaceAfterBullets}
 
-        }}
+%               \textbf{Interests:}{ Acoustic guitar, ping pong, badminton, tennis} \\ \vspace{\vspaceAfterBullets}
+
+%         }}
 \sectionListEnd
 
 %----------- PROJECTS -----------
