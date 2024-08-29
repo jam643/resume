@@ -30,6 +30,7 @@
 \input{glyphtounicode}
 \usepackage{parskip}
 \usepackage{etoolbox}  % for conditional logic
+\usepackage{csquotes}
 
 % is_long_version = true will render more detailed resume
 \newtoggle{is_long_version} % Define the boolean variable
@@ -69,7 +70,7 @@
 
 \iftoggle{is_long_version}
 {\linespread{1.0}}  % single line spacing
-{\linespread{0.95}}  % single line spacing
+{\linespread{0.99}}  % single line spacing
 \setlength{\parskip}{0pt} % paragraph spacing
 
 % bullet list spacing
@@ -169,9 +170,9 @@
 \titleAndDateHeading
 {Principal Robotics Control Engineer}{May 2024 \textbf{--} Present}
 \outerBulletListStart
-\bulletItem{Designed, trained, and deployed a \textbf{PPO-based RL Planner} using PyTorch which outperformed the company’s imitation learning based ML planner in comfort and safety in most scenarios in sim and on-vehicle.}
-\bulletItem{\textbf{Led a cross-org Reflexive Planner project}, a low latency task for collision prevention critical to achieving the Driverless milestone. Coded features that \textbf{reduced the false-positive rate by 400\%} and designed regression tests and metrics for performance monitoring. Presented results directly to \textbf{Motional's CTO}.}
-\bulletItem{Awarded Motional's monthly \textbf{"Mobilizer Award"} and consistently received "exceeds expectation" for every performance review.}
+\bulletItem{Spearheaded development and deployed a \textbf{PPO-based RL Planner} (PyTorch, Stable-Baselines3, C++) surpassing safety and comfort benchmarks set by prior imitation learning based ML planner in sim and on-vehicle ACC scenarios.}
+\bulletItem{\textbf{Led a cross-org Reflexive Planner project}, a low latency task for collision prevention critical to achieving the Driverless milestone. Coded features that \textbf{reduced the false-positive rate by 400\%} (without impacting safety) and designed regression tests and metrics for performance monitoring. Reported results directly to \textbf{Motional's CTO}.}
+\bulletItem{Awarded Motional's monthly \textbf{\enquote{Mobilizer Award}} and consistently received \enquote{exceeds expectation} for every performance review.}
 \outerBulletListEnd
 
 \titleAndDateHeading
@@ -179,25 +180,25 @@
 \outerBulletListStart
 \bulletItem{Code-owner and developer for a \textbf{nonlinear trajectory optimization} formulated with FORCES Pro in Python and deployed in C++.}
 \innerBulletListStart
-\bulletItem{Collaborated to implement and \textbf{patent a novel Contingency MPC} approach for handling multi-modal predictions in trajectory optimizer.}
-\bulletItem{Invented a novel algorithm for generating assertive lane change trajectories across planning control stack; deployed on AV.}
-\bulletItem{Tuned controller performance on-vehicle, contributing to investor analysts’ feedback that the ride was \textbf{“smoother than Waymo’s”}.}
+\bulletItem{Collaborated to implement and \textbf{patent a novel Contingency MPC} approach for handling multi-modal predictions in trajectory optimizer, refactoring solver formulation to support joint optimization with minimal latency overhead.}
+\bulletItem{Invented a novel algorithm for generating assertive lane change trajectories via \enquote{gap matching} behavior to signal intent. Redesigned the Planning/Control interface (C++) and added visualizations to support the new feature.}
+\bulletItem{Tuned MPC weights and enhanced cost function, contributing to investor analysts’ feedback that the ride was \textbf{\enquote{smoother than Waymo’s}}. First tuned in open-loop sim to match human driving, later fine-tuning on vehicle.}
 \innerBulletListEnd
-\bulletItem{Led Path Tracker Perfomance team (6 ppl) creating Python and SQL metric frameworks, automating release tests, and improving LQR tracking performance. Reduced rate of high cross-track error from \textbf{25 to 1 violation per 1K miles}.}
-\bulletItem{Collaborated with team to formulate and implement a \textbf{convex trajectory optimizer} using OSQP, reducing latency by 50\%.}
+\bulletItem{Led Path Tracker Perfomance team (6 ppl) creating Python/SQL metric frameworks and designing automated release tests. Reduced rate of LQR's high cross-track error events from \textbf{25 to 1 violation per 1K miles}.}
+\bulletItem{Collaborated to formulate and implement a \textbf{convex trajectory optimizer} (OSQP, C++, Eigen), linearizing objective and constraint terms. Reduced latency by 50\% over NLP version.}
 \iftoggle{is_long_version}{
   \bulletItem{Developed MySQL metric dashboards for visualization, triage, and drilldown of controls related errors; monitored weekly.}
 }{}
 \bulletItem{\textbf{Led Trajectory Formulation Team} for a quarter; defined the team’s north star strategy, conducted one-on-ones, and oversaw successful demo deployment.}
-\bulletItem{Developed and patented an \textbf{ML based vehicle dynamics model} for simulation (LSTM in PyTorch) and deployed it in C++, reducing average displacement error by 40\% compared to physics based model.}
-\bulletItem{Primary code owner and developer for repo containing Python analysis scripts used for AV log visualization and debug, regularly used by 30+ people.}
+\bulletItem{Developed and patented an \textbf{ML based vehicle dynamics model} for simulation (LSTM in PyTorch) and deployed it in C++, reducing average displacement error by 40\% over 8s compared to existing physics based model.}
+\bulletItem{Primary code owner and top contributor for repo containing Python analysis scripts used for AV log visualization and debug, regularly used by 30+ people. Adding log streaming support and improving deserialization speed by 100x.}
 \outerBulletListEnd
 
 \titleAndDateHeading
 {Robotics Control Engineer III}{October 2018 \textbf{--} August 2020}
 \outerBulletListStart
-\bulletItem{Owner of a dynamic bicycle model based \textbf{path tracker module}, refactoring and integrating code during the company merger.}
-\bulletItem{Designed and coded ‘Mock Planner’ \& ‘Fault Injection’ tools in C++ and Python used to stress test controller \& for vehicle operator training.}
+\bulletItem{Owner of a dynamic bicycle model based \textbf{path tracker module}, refactoring and integrating code during the company merger. Migrating formulation from Acados to Forces PRO and refactoring code to follow SOLID principles.}
+\bulletItem{Designed and coded \enquote{Mock Planner} and \enquote{Fault Injection} tools (C++, Python, IPC) used to stress test controller and for vehicle operator training.}
 \iftoggle{is_long_version}{
   \bulletItem{Curated a set of ride comfort metrics (e.g. motion sickness likelihood), implementing extractors to monitor comfort trends.}
 }{}
@@ -207,8 +208,8 @@
 \titleAndDateHeading
 {Autonomous Vehicle Engineer}{August 2017 \textbf{--} October 2018}
 \outerBulletListStart
-\bulletItem{Worked on vehicle integration and sensor calibration, outfitting the Renault Zoe EVs with nuTonomy’s AV compute stack.}
-\bulletItem{Streamlined AV closed course testing, curating a weekly KPI report on AV performance shared with C-Suite.}
+\bulletItem{Worked on vehicle hardware integration and sensor calibration, outfitting the Renault Zoe EVs with nuTonomy’s AV compute stack. Troubleshooted issues such as an incorrectly wired GPS Serial cable using an oscilloscope.}
+\bulletItem{Streamlined AV closed course testing, curating a weekly KPI report on AV performance (Python) shared with C-suite.}
 \outerBulletListEnd
 
 \companyNameAndLocationHeading
@@ -217,9 +218,12 @@
 {R\&D Electromechanical Engineer and Technical Lead}{August 2016 \textbf{--} August 2017}
 \outerBulletListStart
 \bulletItem{Tuned a PID controller for a DC motor system using system identification and control design methods in MATLAB/Simulink.}
-\bulletItem{Developed a tester using fiber optics, PXI, LabView, 3D printing, and control design to quantify a mechanism’s performance.}
-\bulletItem{Designed tests and analyzed results to characterize the performance of various mechanisms relating to nuclear weapon safety.}
-\bulletItem{Modeled 3D multibody rigid body dynamic mechanism using Siemens LMS software and performed tests to verify the model.}
+\bulletItem{Developed a electromechanical test evaluation setup using fiber optics, PXI, LabView, 3D printing, and control design to quantify a mechanism’s performance.}
+\toggletrue{is_long_version}
+{
+  \bulletItem{Designed tests and analyzed results to characterize the performance of various mechanisms relating to nuclear weapon safety.}
+}{}
+\bulletItem{Modeled and evaluated rigid multi-body equations of motion in 3D using Siemens LMS software.}
 \outerBulletListEnd
 
 \companyNameAndLocationHeading
@@ -228,8 +232,7 @@
 {Master’s Thesis, Dynamics Subteam Lead}{January 2015 \textbf{--} May 2016}
 \outerBulletListStart
 \bulletItem{Created \bref{https://github.com/jam643/SailboatSim3D/tree/master}{a simulation framework} to model the 3D dynamics of a sailboat in MATLAB to determine the feasibility of autonomously sailing around the world.}
-\bulletItem{Wrote \bref{https://bpb-us-w2.wpmucdn.com/sites.coecis.cornell.edu/dist/5/91/files/2017/06/Semester-Report-Spring-2016-Jesse-Miller-1e485cb.pdf}{a thesis paper} describing a novel ‘rudder connected to sail’ design to improve the directional stability of a robotic sailboat.}
-\bulletItem{Presented findings at \bref{https://robotics.cornell.edu/2019/08/14/a-directionally-self-stable-robotic-sail-boat-concept-and-simulations/}{a robotics seminar} with advisor \bref{http://ruina.tam.cornell.edu/}{Andy Ruina} at Cornell University and received \bref{https://www.mae.cornell.edu/news/sibley-school-mechanical-aerospace-engineering-student-awards-0}{the Kelly Prize} for aerospace related research.}
+\bulletItem{Wrote \bref{https://bpb-us-w2.wpmucdn.com/sites.coecis.cornell.edu/dist/5/91/files/2017/06/Semester-Report-Spring-2016-Jesse-Miller-1e485cb.pdf}{a thesis paper} describing a novel ‘rudder connected to sail’ design to improve the directional stability of a robotic sailboat. Presented findings at \bref{https://robotics.cornell.edu/2019/08/14/a-directionally-self-stable-robotic-sail-boat-concept-and-simulations/}{a robotics seminar} with advisor \bref{http://ruina.tam.cornell.edu/}{Andy Ruina} at Cornell University.}
 \bulletItem{Provided recommended robotic sailboat design to \bref{https://cusail.com/}{CUSail project team} at Cornell which they built and tested on Cayuga Lake, verifying the simulation results.}
 \outerBulletListEnd
 
@@ -263,11 +266,11 @@
 \titleAndDateHeading
 {Engineering Co-op Student}{January 2014 \textbf{--} August 2014}
 \outerBulletListStart
-\bulletItem{\textbf{Invented} a unique idea to listen to the sounds produced by handwriting and understand what was written.}
+\bulletItem{\textbf{Invented} a unique idea to listen to the sounds produced by handwriting and transcribe what was written.}
 \innerBulletListStart
 \bulletItem{Developed and \bref{https://github.com/jam643/WriteHear/tree/master}{coded a MATLAB program} to transcribe handwriting by only using a microphone.}
-\bulletItem{\bref{https://github.com/jam643/WriteHear/blob/master/WriteHear.pdf}{Presented my invention} in a \textbf{U.S. Air Force wide competition} against 37 other inventions.}
-\bulletItem{\textbf{Won} the competition and received \$15,000 in research funding and a patent for the invention.}
+\bulletItem{\textbf{Won} \$15,000 in research funding by \bref{https://github.com/jam643/WriteHear/blob/master/WriteHear.pdf}{presenting my invention} in a \textbf{U.S. Air Force competition} against 37 others.}
+
 \innerBulletListEnd
 \bulletItem{Designed in NX Unigraphics and performed an experiment to test the effects of unsteady flow through an intercooler.}
 \bulletItem{Published and presented \bref{https://www.researchgate.net/publication/290192705_Effect_of_Unsteady_Flow_on_Intercooler_Performance}{a conference paper} based on these findings in the SAE 2014 Aerospace Conference.}
@@ -322,11 +325,11 @@
 
 \section{Select Patents}
 \begin{itemize}[leftmargin=15pt]
-  \bulletItem{\textbf{Autonomous Driving Mode Engagement}, \bref{https://patents.google.com/patent/US20230159063A1/en?oq=US20230159063A}{US patent US20230159063A1}, March 25, 2023. I developed a method for comfortable and safe transition from manual to autonomous vehicle control.}
-  \bulletItem{\textbf{Control Architectures for Autonomous Vehicles}, \bref{https://patents.google.com/patent/US11794775B2/en?oq=US11794775B2}{US patent US11794775B2}, October 24, 2023. I collaborated to develop and implement novel trajectory optimization based control methods.}
-  \bulletItem{\textbf{ML Based Vehicle Dynamic Simulator Model} (patent pending), Docket No. I2023099, May 24, 2023. I helped design and deploy an LSTM model trained on vehicle dynamics.}
-  \bulletItem{\textbf{Shortened Contingency Horizon MPC With a Terminal Car-Follow Constraint} (patent pending), Docket No. I2023017, January 27, 2023. I designed and implemented a sparse contingency trajectory optimization formulation that improved solve-time while maintaining recursive safety guarantees.}
-  \bulletItem{\textbf{Autonomous Vehicle with Contingency Consideration in Trajectory Realization} (patent pending), Application No US18164652, February 6, 2023. I co-designed and implemented a joint trajectory optimization formulation for safely and comfortably handling multimodal predictions.}
+  \bulletItem{\textbf{Autonomous Driving Mode Engagement}, \bref{https://patents.google.com/patent/US20230159063A1/en?oq=US20230159063A}{US patent US20230159063A1}, March 25, 2023. Developed a method for comfortable and safe transition from manual to autonomous vehicle control.}
+  \bulletItem{\textbf{Control Architectures for Autonomous Vehicles}, \bref{https://patents.google.com/patent/US11794775B2/en?oq=US11794775B2}{US patent US11794775B2}, October 24, 2023. Collaborated to develop and implement novel trajectory optimization based control methods.}
+  \bulletItem{\textbf{ML Based Vehicle Dynamic Simulator Model} (patent pending), Docket No. I2023099, May 24, 2023. Helped design and deploy an LSTM model trained on vehicle dynamics.}
+  \bulletItem{\textbf{Shortened Contingency Horizon MPC With a Terminal Car-Follow Constraint} (patent pending), Docket No. I2023017, January 27, 2023. Designed and implemented a sparse contingency trajectory optimization formulation that improved solve-time while maintaining recursive safety guarantees.}
+  \bulletItem{\textbf{Autonomous Vehicle with Contingency Consideration in Trajectory Realization} (patent pending), Application No US18164652, February 6, 2023. Co-designed and implemented a joint trajectory optimization formulation for safely and comfortably handling multimodal predictions.}
 \end{itemize}
 
 %----------- SKILLS -----------
