@@ -70,7 +70,7 @@
 
 \iftoggle{is_long_version}
 {\linespread{1.0}}  % single line spacing
-{\linespread{0.99}}  % single line spacing
+{\linespread{0.97}}  % single line spacing
 \setlength{\parskip}{0pt} % paragraph spacing
 
 % bullet list spacing
@@ -150,7 +150,7 @@
   % $|$
   % \faGlobe \hspace{\spaceAfterLogo} \href{https://jam643.github.io}{Portfolio}
   $|$
-  \faMapMarker \hspace{\spaceAfterLogo} \href{https://maps.app.goo.gl/hpB8QGkNWpEHrJGD9}{Cambdrige, MA}
+  \faMapMarker \hspace{\spaceAfterLogo} \href{https://maps.app.goo.gl/hpB8QGkNWpEHrJGD9}{Cambridge, MA}
 \end{center}
 
 %----------- SUMMARY -----------
@@ -178,17 +178,15 @@
 \titleAndDateHeading
 {Senior Robotics Control Engineer and Team Lead}{August 2020 \textbf{--} May 2024}
 \outerBulletListStart
-\bulletItem{Code-owner and developer for a \textbf{nonlinear trajectory optimization} formulated with FORCES Pro in Python and deployed in C++.}
+\bulletItem{Code-owner and developer for a \textbf{nonlinear trajectory optimization} based MPC formulated with FORCES Pro in Python and deployed in C++. Implemented dozens of features and gave thorough software and design reviews.}
 \innerBulletListStart
 \bulletItem{Collaborated to implement and \textbf{patent a novel Contingency MPC} approach for handling multi-modal predictions in trajectory optimizer, refactoring solver formulation to support joint optimization with minimal latency overhead.}
-\bulletItem{Invented a novel algorithm for generating assertive lane change trajectories via \enquote{gap matching} behavior to signal intent. Redesigned the Planning/Control interface (C++) and added visualizations to support the new feature.}
-\bulletItem{Tuned MPC weights and enhanced cost function, contributing to investor analysts’ feedback that the ride was \textbf{\enquote{smoother than Waymo’s}}. First tuned in open-loop sim to match human driving, later fine-tuning on vehicle.}
+\bulletItem{Invented a novel algorithm for generating \textbf{assertive lane change} trajectories via \enquote{gap matching} behavior to signal intent. Redesigned the Planning/Control interface (C++) and added visualizations to support the new feature.}
+\bulletItem{\textbf{Tuned MPC} weights and enhanced cost function, contributing to investor analysts’ feedback that the ride was \textbf{\enquote{smoother than Waymo’s}}. First tuned in open-loop sim to match human driving, later fine-tuning on vehicle.}
 \innerBulletListEnd
-\bulletItem{Led Path Tracker Perfomance team (6 ppl) creating Python/SQL metric frameworks and designing automated release tests. Reduced rate of LQR's high cross-track error events from \textbf{25 to 1 violation per 1K miles}.}
+\bulletItem{\textbf{Led Path Tracker Perfomance team} (6 ppl) creating Python/SQL metric frameworks and designing automated release tests. Reduced rate of LQR's high cross-track error events from \textbf{25 to 1 violation per 1K miles}.}
 \bulletItem{Collaborated to formulate and implement a \textbf{convex trajectory optimizer} (OSQP, C++, Eigen), linearizing objective and constraint terms. Reduced latency by 50\% over NLP version.}
-\iftoggle{is_long_version}{
-  \bulletItem{Developed MySQL metric dashboards for visualization, triage, and drilldown of controls related errors; monitored weekly.}
-}{}
+\bulletItem{Developed MySQL metric dashboards for visualization, triage, and drilldown of controls related errors; monitored weekly by on-call engineer. Proactively caught and fixed bugs and latency regressions before they impacted the fleet.}
 \bulletItem{\textbf{Led Trajectory Formulation Team} for a quarter; defined the team’s north star strategy, conducted one-on-ones, and oversaw successful demo deployment.}
 \bulletItem{Developed and patented an \textbf{ML based vehicle dynamics model} for simulation (LSTM in PyTorch) and deployed it in C++, reducing average displacement error by 40\% over 8s compared to existing physics based model.}
 \bulletItem{Primary code owner and top contributor for repo containing Python analysis scripts used for AV log visualization and debug, regularly used by 30+ people. Adding log streaming support and improving deserialization speed by 100x.}
@@ -208,7 +206,7 @@
 \titleAndDateHeading
 {Autonomous Vehicle Engineer}{August 2017 \textbf{--} October 2018}
 \outerBulletListStart
-\bulletItem{Worked on vehicle hardware integration and sensor calibration, outfitting the Renault Zoe EVs with nuTonomy’s AV compute stack. Troubleshooted issues such as an incorrectly wired GPS Serial cable using an oscilloscope.}
+\bulletItem{Worked on vehicle hardware integration and sensor calibration, outfitting the Renault Zoe EVs with nuTonomy’s AV compute stack. Troubleshooted and fixed issues such as an incorrectly wired GPS Serial cable using an oscilloscope.}
 \bulletItem{Streamlined AV closed course testing, curating a weekly KPI report on AV performance (Python) shared with C-suite.}
 \outerBulletListEnd
 
@@ -254,11 +252,11 @@
 \titleAndDateHeading
 {Data Analyst and Performance Intern}{May 2015 \textbf{--} August 2015}
 \outerBulletListStart
-\bulletItem{Created a random forest machine learning predictor using Python and MySQL to predict the time it takes to pick an item off a shelf.}
+\bulletItem{Created a random forest ML predictor (Python, MySQL) to predict the time it takes to pick an item off a shelf.}
 \iftoggle{is_long_version}{
   \bulletItem{Designed a Linux service using Java and XML, allowing the predictor to be easily used.}
 }{}
-\bulletItem{Implemented the predictor service with a performance website, improving metrics used to assess employee performance.}
+\bulletItem{Implemented the predictor service that improved metrics used to assess employee performance, saving the company millions and remaining in use years after my internship.}
 \outerBulletListEnd
 
 \companyNameAndLocationHeading
