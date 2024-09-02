@@ -6,8 +6,8 @@ Additionally, to trim my resume's length I may comment out certain sections so t
 
 ## View PDF
 
-* [View resume in a browser](https://mozilla.github.io/pdf.js/web/viewer.html?file=https://raw.githubusercontent.com/jam643/resume/main/jesse_miller_resume.pdf)
-* [Click here to download](https://raw.githubusercontent.com/jam643/resume/main/jesse_miller_resume.pdf)
+* [View resume in a browser](https://mozilla.github.io/pdf.js/web/viewer.html?file=https://raw.githubusercontent.com/jam643/resume/resume_shortened/jesse_miller_resume.pdf)
+* [Click here to download](https://raw.githubusercontent.com/jam643/resume/resume_shortened/jesse_miller_resume.pdf)
 
 ## Screenshots
 
