@@ -69,15 +69,13 @@
 {3pt} % spacing above
 {3pt} % spacing below
 
-\iftoggle{is_long_version}
-{\linespread{1.0}}  % single line spacing
-{\linespread{1.0}}  % single line spacing
+\linespread{1.01}  % line spacing
 \setlength{\parskip}{0pt} % paragraph spacing
 
 % bullet list spacing
 \setlist[itemize]{itemsep=0pt} % vertical spacing between bullets
-\def\vspaceAfterBullets{4pt} % vertical spacing after bullet lists
-\def\bulletIndent{15pt} % indent of bullet lists
+\def\vspaceAfterBullets{3.5pt} % vertical spacing after bullet lists
+\def\bulletIndent{20pt} % indent of bullet lists
 
 % set bullet list symbol formatting
 \setlist[itemize,1]{label=$\vcenter{\hbox{\tiny$\bullet$}}$} 
@@ -172,7 +170,7 @@
 {Principal Robotics Control Engineer}{May 2024 \textbf{--} Present}
 \outerBulletListStart
 \bulletItem{Spearheaded development and deployed a \textbf{PPO-based RL Planner} (PyTorch, Stable-Baselines3, C++) surpassing safety and comfort benchmarks set by prior imitation learning based ML planner in sim and on-vehicle ACC scenarios.}
-\bulletItem{\textbf{Led a cross-org Reflexive Planner project}, a low latency task for collision prevention critical to achieving the Driverless milestone. Coded features that \textbf{reduced the false-positive rate by 400\%} (without impacting safety) and designed regression tests and metrics for performance monitoring. Reported results directly to \textbf{Motional's CTO}.}
+\bulletItem{\textbf{Led cross-org Reflexive Planner project}, a low latency task for collision prevention critical to achieving Driverless milestone. Coded features that \textbf{reduced false-positive rate by 400\%} (without impacting safety) and designed regression tests and metrics for performance monitoring. Reported results directly to \textbf{Motional's CTO}.}
 \bulletItem{Awarded Motional's monthly \textbf{\enquote{Mobilizer Award}} and consistently received \enquote{exceeds expectation} for every performance review.}
 \outerBulletListEnd
 
@@ -181,8 +179,8 @@
 \outerBulletListStart
 \bulletItem{Code-owner and developer for a \textbf{nonlinear trajectory optimization} based MPC formulated with FORCES Pro in Python and deployed in C++. Implemented dozens of features and gave thorough software and design reviews.}
 \innerBulletListStart
-\bulletItem{Collaborated to implement and \textbf{patent a novel Contingency MPC} approach for handling multi-modal predictions in trajectory optimizer, refactoring solver formulation to support joint optimization with minimal latency overhead.}
-\bulletItem{Invented a novel algorithm for generating \textbf{assertive lane change} trajectories via \enquote{gap matching} behavior to signal intent. Redesigned the Planning/Control interface (C++) and added visualizations to support the new feature.}
+\bulletItem{Co-implemented and \textbf{patented a novel Contingency MPC} for handling multi-modal predictions in trajectory optimizer, refactoring solver formulation to support joint optimization with minimal latency overhead.}
+\bulletItem{Invented novel algorithm for generating \textbf{assertive lane change} trajectories via \enquote{gap matching} behavior to signal intent. Redesigned Planning/Control interface (C++) and added visualizations to support new feature.}
 \bulletItem{\textbf{Tuned MPC} weights and enhanced cost function, contributing to investor analysts’ feedback that the ride was \textbf{\enquote{smoother than Waymo’s}}. First tuned in open-loop sim to match human driving, later fine-tuning on vehicle.}
 \innerBulletListEnd
 \bulletItem{\textbf{Led Path Tracker Perfomance team} (6 ppl) creating Python/SQL metric frameworks and designing automated release tests. Reduced rate of LQR's high cross-track error events from \textbf{25 to 1 violation per 1K miles}.}
@@ -216,8 +214,8 @@
 \titleAndDateHeading
 {R\&D Electromechanical Engineer and Technical Lead}{August 2016 \textbf{--} August 2017}
 \outerBulletListStart
-\bulletItem{Tuned a PID controller for a DC motor system using system identification and control design methods in MATLAB/Simulink.}
-\bulletItem{Developed a electromechanical test evaluation setup using fiber optics, PXI, LabView, 3D printing, and control design to quantify a mechanism’s performance.}
+\bulletItem{Tuned PID controller for DC motor system using system identification and control design methods in MATLAB/Simulink.}
+\bulletItem{Developed electromechanical test evaluation setup using fiber optics, PXI, LabView, 3D printing, and control design to quantify a mechanism’s performance.}
 \iftoggle{is_long_version}
 {
   \bulletItem{Designed tests and analyzed results to characterize the performance of various mechanisms relating to nuclear weapon safety.}
@@ -335,7 +333,7 @@
 \vspace{\vspaceAfterBullets}
 \bulletItem{\textbf{Technologies:}{ PyTorch, FORCES Pro, Stable-Baselines3, OSQP, Ubuntu/Linux, Git, CMake, Bazel, \LaTeX, Jupyter Notebook, ROS, Simulink, OpenCV, Raspberry Pi, Arduino, SolidWorks, Blender}}
 \vspace{\vspaceAfterBullets}
-\bulletItem{\textbf{Continued Education:}{ \bref{https://github.com/jam643/CS285DeepRL/tree/master}{Deep Reinforcement Learning CS285}, \bref{https://github.com/jam643/UnderactuatedRobotics-6p832-JesseM}{Underactuated Robotics MIT 6.832}, \bref{https://github.com/jam643/Courses_JesseM/tree/master/DesignPatternsCpp}{Udemy Design Patterns in C++}}}
+\bulletItem{\textbf{Continued Education:}{ \bref{https://github.com/jam643/CS285DeepRL/tree/master}{Deep RL CS285}, \bref{https://github.com/jam643/UnderactuatedRobotics-6p832-JesseM}{Underactuated Robotics MIT 6.832}, \bref{https://github.com/jam643/Courses_JesseM/tree/master/DesignPatternsCpp}{Udemy Design Patterns in C++}}}
 \vspace{\vspaceAfterBullets}
 \bulletItem{\textbf{Interests:}{ \bref{https://www.youtube.com/watch?v=z41U4mtKEJw}{Acoustic guitar}, ping pong, badminton, tennis, skiing, auditing classes}}
 \sectionListEnd
