@@ -32,6 +32,7 @@
 \usepackage{etoolbox}  % for conditional logic
 \usepackage{csquotes}
 
+
 % is_long_version = true will render more detailed resume
 \newtoggle{is_long_version} % Define the boolean variable
 \settoggle{is_long_version}{false}
@@ -70,12 +71,12 @@
 
 \iftoggle{is_long_version}
 {\linespread{1.0}}  % single line spacing
-{\linespread{0.97}}  % single line spacing
+{\linespread{1.0}}  % single line spacing
 \setlength{\parskip}{0pt} % paragraph spacing
 
 % bullet list spacing
 \setlist[itemize]{itemsep=0pt} % vertical spacing between bullets
-\def\vspaceAfterBullets{3pt} % vertical spacing after bullet lists
+\def\vspaceAfterBullets{4pt} % vertical spacing after bullet lists
 \def\bulletIndent{15pt} % indent of bullet lists
 
 % set bullet list symbol formatting
@@ -104,7 +105,7 @@
 \newcommand{\titleAndDateHeading}[2]{
     \item
     \begin{tabular*}{1.0\textwidth}[b]{l@{\extracolsep{\fill}}r}
-      \textit{\textbf{\small#1}} & \textit{\small #2}
+      {\bfseries\itshape\small #1} & \itshape\small #2
     \end{tabular*}
 }
 
@@ -217,7 +218,7 @@
 \outerBulletListStart
 \bulletItem{Tuned a PID controller for a DC motor system using system identification and control design methods in MATLAB/Simulink.}
 \bulletItem{Developed a electromechanical test evaluation setup using fiber optics, PXI, LabView, 3D printing, and control design to quantify a mechanism’s performance.}
-\toggletrue{is_long_version}
+\iftoggle{is_long_version}
 {
   \bulletItem{Designed tests and analyzed results to characterize the performance of various mechanisms relating to nuclear weapon safety.}
 }{}
@@ -252,11 +253,13 @@
 \titleAndDateHeading
 {Data Analyst and Performance Intern}{May 2015 \textbf{--} August 2015}
 \outerBulletListStart
-\bulletItem{Created a random forest ML predictor (Python, MySQL) to predict the time it takes to pick an item off a shelf.}
 \iftoggle{is_long_version}{
+  \bulletItem{Created a random forest ML predictor (Python, MySQL) to predict the time it takes to pick an item off a shelf.}
   \bulletItem{Designed a Linux service using Java and XML, allowing the predictor to be easily used.}
-}{}
-\bulletItem{Implemented the predictor service that improved metrics used to assess employee performance, saving the company millions and remaining in use years after my internship.}
+  \bulletItem{Implemented the predictor service that improved metrics used to assess employee performance, saving the company millions and remaining in use years after my internship.}
+}{
+  \bulletItem{Built and deployed a random forest ML predictor to forecast pick times (Python, MySQL), enhancing employee performance metrics and saving the company millions, remaining in use years post-internship.}
+}
 \outerBulletListEnd
 
 \companyNameAndLocationHeading
@@ -264,14 +267,8 @@
 \titleAndDateHeading
 {Engineering Co-op Student}{January 2014 \textbf{--} August 2014}
 \outerBulletListStart
-\bulletItem{\textbf{Invented} a unique idea to listen to the sounds produced by handwriting and transcribe what was written.}
-\innerBulletListStart
-\bulletItem{Developed and \bref{https://github.com/jam643/WriteHear/tree/master}{coded a MATLAB program} to transcribe handwriting by only using a microphone.}
-\bulletItem{\textbf{Won} \$15,000 in research funding by \bref{https://github.com/jam643/WriteHear/blob/master/WriteHear.pdf}{presenting my invention} in a \textbf{U.S. Air Force competition} against 37 others.}
-
-\innerBulletListEnd
-\bulletItem{Designed in NX Unigraphics and performed an experiment to test the effects of unsteady flow through an intercooler.}
-\bulletItem{Published and presented \bref{https://www.researchgate.net/publication/290192705_Effect_of_Unsteady_Flow_on_Intercooler_Performance}{a conference paper} based on these findings in the SAE 2014 Aerospace Conference.}
+\bulletItem{\textbf{Invented} and developed \bref{https://github.com/jam643/WriteHear/tree/master}{a MATLAB program} to transcribe handwriting using only a microphone, \textbf{winning \$15,000} in research funding from a \textbf{U.S. Air Force competition} against 37 others.}
+\bulletItem{Designed and conducted an experiment to test the effects of unsteady flow through an intercooler, resulting in a \bref{https://www.researchgate.net/publication/290192705_Effect_of_Unsteady_Flow_on_Intercooler_Performance}{published and presented paper} at the SAE 2014 Aerospace Conference.}
 \outerBulletListEnd
 
 \iftoggle{is_long_version}
@@ -336,7 +333,7 @@
 \sectionListStart
 \bulletItem{\textbf{Languages:}{ Python (3.x), Modern C++ (14, 17, 20), MATLAB, SQL, LabVIEW, C}}
 \vspace{\vspaceAfterBullets}
-\bulletItem{\textbf{Technologies:}{ PyTorch, FORCES Pro, Stable-Baselines3, OSQP, Ubuntu/Linux, Git, CMake, Bazel, \LaTeX, Jupyter Notebook, Simulink, OpenCV, Raspberry Pi, Arduino, SolidWorks, Blender}}
+\bulletItem{\textbf{Technologies:}{ PyTorch, FORCES Pro, Stable-Baselines3, OSQP, Ubuntu/Linux, Git, CMake, Bazel, \LaTeX, Jupyter Notebook, ROS, Simulink, OpenCV, Raspberry Pi, Arduino, SolidWorks, Blender}}
 \vspace{\vspaceAfterBullets}
 \bulletItem{\textbf{Continued Education:}{ \bref{https://github.com/jam643/CS285DeepRL/tree/master}{Deep Reinforcement Learning CS285}, \bref{https://github.com/jam643/UnderactuatedRobotics-6p832-JesseM}{Underactuated Robotics MIT 6.832}, \bref{https://github.com/jam643/Courses_JesseM/tree/master/DesignPatternsCpp}{Udemy Design Patterns in C++}}}
 \vspace{\vspaceAfterBullets}
