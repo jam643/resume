@@ -165,9 +165,17 @@
 \sectionListStart
 
 \companyNameAndLocationHeading
+{Boston Dynamics}{Waltham, MA}
+\titleAndDateHeading
+{Senior Staff Reinforcement Learning Research Scientist}{January 2025 \textbf{--} Present}
+\outerBulletListStart
+\bulletItem{Developed RL policies for bimanual dextrous manipulation, deployed on Atlas humanoid robot.}
+\outerBulletListEnd
+
+\companyNameAndLocationHeading
 {Motional}{Boston, MA}
 \titleAndDateHeading
-{Principal Robotics Control Engineer}{May 2024 \textbf{--} Present}
+{Principal Robotics Control Engineer}{May 2024 \textbf{--} December 2024}
 \outerBulletListStart
 \bulletItem{Spearheaded development and deployed a \textbf{PPO-based RL Planner} (PyTorch, Stable-Baselines3, C++) surpassing safety and comfort benchmarks set by prior imitation learning based ML planner in sim and on-vehicle ACC scenarios.}
 \bulletItem{\textbf{Led cross-org Reflexive Planner project}, a low latency task for collision prevention critical to achieving Driverless milestone. Coded features that \textbf{reduced false-positive rate by 400\%} (without impacting safety) and designed regression tests and metrics for performance monitoring. Reported results directly to \textbf{Motional's CTO}.}
@@ -321,7 +329,9 @@
   \bulletItem{\textbf{Autonomous Driving Mode Engagement}, \bref{https://patents.google.com/patent/US20230159063A1/en?oq=US20230159063A}{US patent US20230159063A1}, March 25, 2023. Developed a method for comfortable and safe transition from manual to autonomous vehicle control.}
   \bulletItem{\textbf{Control Architectures for Autonomous Vehicles}, \bref{https://patents.google.com/patent/US11794775B2/en?oq=US11794775B2}{US patent US11794775B2}, October 24, 2023. Collaborated to develop and implement novel trajectory optimization based control methods.}
   \bulletItem{\textbf{ML Based Vehicle Dynamic Simulator Model} (patent pending), Docket No. I2023099, May 24, 2023. Helped design and deploy an LSTM model trained on vehicle dynamics.}
-  \bulletItem{\textbf{Shortened Contingency Horizon MPC With a Terminal Car-Follow Constraint} (patent pending), Docket No. I2023017, January 27, 2023. Designed and implemented a sparse contingency trajectory optimization formulation that improved solve-time while maintaining recursive safety guarantees.}
+  \iftoggle{is_long_version}{
+    \bulletItem{\textbf{Shortened Contingency Horizon MPC With a Terminal Car-Follow Constraint} (patent pending), Docket No. I2023017, January 27, 2023. Designed and implemented a sparse contingency trajectory optimization formulation that improved solve-time while maintaining recursive safety guarantees.}
+  }{}
   \bulletItem{\textbf{Autonomous Vehicle with Contingency Consideration in Trajectory Realization} (patent pending), Application No US18164652, February 6, 2023. Co-designed and implemented a joint trajectory optimization formulation for safely and comfortably handling multimodal predictions.}
 \end{itemize}
 
